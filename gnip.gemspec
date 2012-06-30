@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "gnip-stream-parser"
   s.version     = Gnip::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Andy Ogzewalla"]
-  s.email       = ["andyogzewalla@gmail.com"]
+  s.authors     = ["Andy Ogzewalla", "Chris Oliver"]
+  s.email       = ["andyogzewalla@gmail.com", "excid3@gmail.com"]
   s.homepage    = "https://github.com/WizardOfOgz/gnip"
   s.summary     = %q{A library for streaming data from Gnip}
   s.description = %q{This is a library for streaming and parsing data from Gnip Data Collector and Power Track feeds.}
@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'yajl-ruby', '~> 0.8.2'
   s.add_dependency 'sergio', '>= 0.0.3'
   s.add_dependency 'curb', '~> 0.8.0'
+  s.add_dependency 'colorize', '~> 0.5.8'
   s.add_development_dependency 'rspec', '~> 2.5.0'
   s.add_development_dependency 'rake'
 
