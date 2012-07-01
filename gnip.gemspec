@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'yajl-ruby', '~> 0.8.2'
   s.add_dependency 'sergio', '>= 0.0.3'
   s.add_dependency 'curb', '~> 0.8.0'
-  s.add_dependency 'colorize', '~> 0.5.8'
   s.add_development_dependency 'rspec', '~> 2.5.0'
   s.add_development_dependency 'rake'
 

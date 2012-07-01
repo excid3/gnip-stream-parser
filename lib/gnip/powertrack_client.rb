@@ -17,7 +17,7 @@ module Gnip
 
       loop do
 
-        Gnip.logger.info "Connecting to Gnip...".colorize(:yellow)
+        Gnip.on_connect.call if Gnip.on_connect
 
         Curl::Easy.http_get @url do |c|
           c.http_auth_types = :basic
@@ -32,7 +32,8 @@ module Gnip
 
         sleep(0.25) # Need to implement an exponential backoff pattern *
 
-        Gnip.logger.warn "Disconnected from Gnip...".colorize(:red)
+        Gnip.on_disconnect.call if Gnip.on_disconnect
+
       end
     end
 

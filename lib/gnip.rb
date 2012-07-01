@@ -5,12 +5,14 @@ require File.join(File.dirname(__FILE__), "gnip", "data_collector_client")
 
 module Gnip
   class << self
-    def logger
-      @@logger ||= nil
+    attr_reader :on_connect, :on_disconnect
+
+    def before_connect(&block)
+      @on_connect = block
     end
 
-    def logger=(logger)
-      @@logger = logger
+    def after_disconnect(&block)
+      @on_disconnect = block
     end
   end
 end
