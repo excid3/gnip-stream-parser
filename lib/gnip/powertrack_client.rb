@@ -24,6 +24,7 @@ module Gnip
           c.username = @username
           c.password = @password
           c.encoding = 'gzip'
+          c.timeout  = nil
           c.on_body do |data|
             parser << data
             data.size
